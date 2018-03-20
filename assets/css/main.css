@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.link-menu {
+    display: block;
+    position: fixed;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 200px;
+    background: #1c2a33;
+    height: 100%;
+    top: 0;
+    left: -200px;
+    transition: left .2s;
+    z-index: 2;
+    transform: translateZ(0);
+    line-height: 1.5;
+
+}
+
+.burger-menu {
+    display: none;
+}
+
+.icon-menu {
+    color: #fff;
+    padding: 5px;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    transition: left .23s;
+    z-index: 3;
+    width: 25px;
+    transform: translateZ(0);
+
+
+}
+
+.links {
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    margin: 30px auto 0px;
+    text-align: center;
+    line-height: 50px;
+}
+.links:hover {
+    background-color: #3c414a75;
+}
+.icon-menu span {
+    display: block;
+    height: 5px;
+    background-color: black;
+    margin: 5px 0 0;
+    transition: all .1s linear .23s;
+    position: relative;
+}
+
+.icon-menu span.one {
+    margin-top: 0;
+}
+
+.burger-menu:checked ~ .icon-menu {
+    left: 160px;
+}
+
+.burger-menu:checked ~ .link-menu {
+    left: 0;
+}
+
+.burger-menu:checked ~ .icon-menu span.one {
+    transform: rotate(45deg);
+    top: 10px;
+    background-color: white;
+}
+
+.burger-menu:checked ~ .icon-menu span.two {
+    opacity: 0;
+}
+
+.burger-menu:checked ~ .icon-menu span.three {
+    transform: rotate(-45deg);
+    top: -10px;
+    background-color: white;
+}
